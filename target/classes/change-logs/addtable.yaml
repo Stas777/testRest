@@ -1,0 +1,38 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: Stas
+      changes:
+        - createTable:
+            tableName: User
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 2
+      author: Stas
+      changes:
+      - insert:
+          tableName: User
+          columns:
+          - column:
+              name: password
+              value: "1234"
+      - insert:
+          tableName: User
+          columns:
+          - column:
+              name: password
+              value: "5678"

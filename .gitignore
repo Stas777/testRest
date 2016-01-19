@@ -1,3 +1,4 @@
 .idea/*
 target/maven-status/*
 testRest.iml
+lib/*
